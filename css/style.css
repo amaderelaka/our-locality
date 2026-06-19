@@ -1,0 +1,498 @@
+/* ============================================================
+   STYLESHEET — Gangnapur & Gopinagar locality site
+   ------------------------------------------------------------
+   To change the colors of the whole site, edit the values
+   inside the :root block below. Everything else inherits.
+   ============================================================ */
+
+:root {
+  /* --- Palette --------------------------------------------- */
+  --paper:      #F5EFE1;   /* main background, slightly aged */
+  --paper-warm: #EFE6D2;   /* secondary surfaces */
+  --surface:   #FFFFFF;    /* cards */
+  --ink:       #1B1A17;    /* primary text */
+  --ink-muted: #5A554B;    /* secondary text */
+  --rule:      #D8CFB9;    /* hairline dividers */
+  --alta:      #A8331C;    /* primary accent — Bengali alta red */
+  --peacock:   #1E5F5C;    /* secondary accent — peacock teal */
+  --gold:      #B98A2A;    /* tertiary accent — marigold */
+
+  /* --- Type ----------------------------------------------- */
+  --display:   "Cormorant Garamond", "Noto Serif Bengali", Georgia, serif;
+  --bangla:    "Noto Serif Bengali", "Cormorant Garamond", serif;
+  --body:      "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* --- Spacing -------------------------------------------- */
+  --max-width: 980px;
+  --gutter:    1.5rem;
+}
+
+/* ============================================================
+   Reset & base
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--alta); text-decoration: none; border-bottom: 1px solid rgba(168, 51, 28, 0.3); transition: border-color .15s; }
+a:hover { border-bottom-color: var(--alta); }
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ============================================================
+   Header & navigation
+   ============================================================ */
+.site-header {
+  padding: 2rem 0 1.25rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-header .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.site-title {
+  font-family: var(--display);
+  font-size: clamp(1.5rem, 3.5vw, 1.9rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+  line-height: 1.1;
+}
+.site-title .bangla {
+  font-family: var(--bangla);
+  display: block;
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--ink-muted);
+  margin-top: 0.15rem;
+}
+.site-title a { color: var(--ink); border: none; }
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  font-size: 0.92rem;
+}
+.site-nav a {
+  color: var(--ink-muted);
+  border: none;
+  padding: 0.15rem 0;
+  border-bottom: 1px solid transparent;
+}
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--ink);
+  border-bottom-color: var(--alta);
+}
+
+/* ============================================================
+   Hero (homepage)
+   ============================================================ */
+.hero {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-eyebrow {
+  font-family: var(--bangla);
+  font-size: 1rem;
+  color: var(--alta);
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.05;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.015em;
+}
+.hero-title .bangla {
+  font-family: var(--bangla);
+  display: block;
+  font-size: 0.75em;
+  font-weight: 400;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+.hero-lede {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  color: var(--ink-muted);
+  max-width: 620px;
+  margin: 1.25rem 0 0;
+  line-height: 1.5;
+}
+.hero-lede .bangla {
+  font-family: var(--bangla);
+  font-style: normal;
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--alta);
+  font-size: 0.95em;
+}
+
+/* ============================================================
+   Page header (sub-pages)
+   ============================================================ */
+.page-head {
+  padding: 3rem 0 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.page-eyebrow {
+  font-family: var(--bangla);
+  font-size: 0.95rem;
+  color: var(--alta);
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.01em;
+}
+.page-title {
+  font-family: var(--display);
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================================
+   Ornament — alpana-inspired SVG section divider
+   ============================================================ */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  color: var(--alta);
+  opacity: 0.7;
+}
+.ornament svg { width: 64px; height: 18px; }
+
+/* ============================================================
+   Section grid (homepage cards)
+   ============================================================ */
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+.section-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 1.5rem 1.5rem 1.75rem;
+  transition: border-color .2s, transform .2s;
+  border-bottom: 3px solid var(--rule);
+}
+.section-card:hover {
+  border-color: var(--ink-muted);
+  border-bottom-color: var(--alta);
+  transform: translateY(-2px);
+}
+.section-card a {
+  color: var(--ink);
+  border: none;
+}
+.section-card .bangla {
+  font-family: var(--bangla);
+  font-size: 0.85rem;
+  color: var(--alta);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.section-card h3 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.005em;
+}
+.section-card p {
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ============================================================
+   Long-form prose (article pages)
+   ============================================================ */
+.prose {
+  padding: 2.5rem 0 4rem;
+  max-width: 680px;
+}
+.prose p {
+  margin: 0 0 1.25rem;
+}
+.prose h2 {
+  font-family: var(--display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 2.5rem 0 1rem;
+  letter-spacing: -0.005em;
+}
+.prose h3 {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin: 2rem 0 0.75rem;
+}
+.prose blockquote {
+  border-left: 3px solid var(--alta);
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-muted);
+}
+.prose ul, .prose ol { padding-left: 1.5rem; }
+.prose li { margin-bottom: 0.4rem; }
+
+/* Inline pull-out box for "did you know" etc. */
+.aside-box {
+  background: var(--paper-warm);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+  border-left: 3px solid var(--peacock);
+}
+.aside-box .bangla {
+  font-family: var(--bangla);
+  color: var(--peacock);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* "Remembered for" line inside an entry */
+.remembered-for {
+  background: var(--paper-warm);
+  padding: 0.55rem 0.9rem;
+  margin: 0.5rem 0 0.75rem;
+  border-left: 2px solid var(--alta);
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.5;
+}
+.remembered-for strong {
+  color: var(--alta);
+  font-weight: 500;
+}
+
+/* Inline Bengali label next to an English heading (h2, h3) */
+.bangla-inline {
+  font-family: var(--bangla);
+  font-weight: 400;
+  font-size: 0.7em;
+  color: var(--alta);
+  margin-left: 0.5rem;
+  letter-spacing: 0;
+}
+
+/* Poem display block on the Writings page */
+.poem {
+  background: var(--paper-warm);
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+  border-left: 3px solid var(--peacock);
+  font-family: var(--bangla), var(--display);
+  font-size: 1.15rem;
+  line-height: 1.9;
+  white-space: pre-wrap;
+  color: var(--ink);
+}
+.poem .poem-attribution {
+  display: block;
+  font-family: var(--body);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-top: 1rem;
+  text-align: right;
+  white-space: normal;
+}
+
+/* ============================================================
+   Person / place card list
+   ============================================================ */
+.entry-list {
+  list-style: none;
+  margin: 2rem 0;
+  padding: 0;
+}
+.entry-list > li {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule);
+  align-items: start;
+}
+.entry-list > li:last-child {
+  border-bottom: 1px solid var(--rule);
+}
+.entry-meta {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  font-style: italic;
+}
+.entry-body h3 {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0 0 0.25rem;
+}
+.entry-body .bangla {
+  font-family: var(--bangla);
+  font-size: 0.9rem;
+  color: var(--alta);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.entry-body p {
+  margin: 0;
+  color: var(--ink-muted);
+}
+
+/* ============================================================
+   Form (community submissions)
+   ============================================================ */
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 2rem;
+  margin: 2rem 0;
+}
+.form-card .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+.form-card label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+.form-card input,
+.form-card select,
+.form-card textarea {
+  font-family: var(--body);
+  font-size: 1rem;
+  padding: 0.7rem 0.85rem;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  border-radius: 0;
+  width: 100%;
+}
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  outline: 2px solid var(--peacock);
+  outline-offset: 1px;
+  border-color: var(--peacock);
+}
+.form-card textarea { min-height: 140px; resize: vertical; }
+.form-card button {
+  font-family: var(--body);
+  font-size: 1rem;
+  background: var(--ink);
+  color: var(--paper);
+  border: none;
+  padding: 0.85rem 2rem;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background .15s;
+}
+.form-card button:hover { background: var(--alta); }
+
+.note {
+  background: var(--paper-warm);
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+}
+
+/* Google Form iframe wrapper */
+.form-embed {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  margin: 2rem 0;
+  padding: 0.5rem;
+  overflow: hidden;
+}
+.form-embed iframe {
+  width: 100%;
+  display: block;
+  background: var(--surface);
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--rule);
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+.site-footer .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.site-footer .bangla { font-family: var(--bangla); }
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 600px) {
+  .entry-list > li {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .form-card { padding: 1.5rem 1.25rem; }
+  .hero { padding: 2.5rem 0 2rem; }
+  .prose { padding: 1.5rem 0 3rem; }
+}
+
+/* ============================================================
+   Accessibility — focus visibility & reduced motion
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--peacock);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+  .section-card:hover { transform: none; }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community — Our locality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=Noto+Serif+Bengali:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1 class="site-title">
+      <a href="index.html">Our locality <span class="bangla">আমাদের এলাকা</span></a>
+    </h1>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="writings.html">Writings</a></li>
+        <li><a href="geography.html">Geography</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="voter.html">Voter info</a></li>
+        <li><a href="facts.html">Facts</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="community.html" class="active">Community</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <header class="page-head">
+    <div class="wrap">
+      <p class="page-eyebrow">সম্প্রদায়</p>
+      <h2 class="page-title">Send a message to the editors</h2>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article class="prose">
+
+      <p>
+        Use the form below to share a memory, send a correction, suggest someone for an interview, or post a community request or notice. Submissions arrive directly with the site editors. <strong>Nothing appears on the website until an editor adds it.</strong> This keeps the site accurate and respectful.
+      </p>
+
+      <!--
+        =====================================================
+        GOOGLE FORM SETUP — read before going live
+        =====================================================
+        The site uses a Google Form for submissions. It is
+        free, has no submission cap, and the results go into
+        a Google Sheet you control.
+
+        To activate:
+          1. Go to https://forms.google.com and create a form.
+             Suggested fields: Name, Village, Email,
+             Type of submission (multiple choice), Message.
+          2. Open your form, click "Send" (top right),
+             then click the <> embed icon.
+          3. Copy the <iframe> code Google gives you.
+          4. Paste it inside the <div class="form-embed">
+             block below, replacing the placeholder iframe.
+          5. Optional: in the form's "Responses" tab, click
+             the Sheets icon to send all submissions to a
+             Google Sheet for easy review.
+
+        Approved submissions can then be added to the
+        "Recent community notices" list further down this page.
+        =====================================================
+      -->
+
+      <div class="form-embed">
+        <!-- EDIT: replace the iframe below with the one Google gives you -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/viewform?embedded=true"
+          width="100%"
+          height="900"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Community submissions form">
+          Loading the form&hellip;
+        </iframe>
+      </div>
+
+      <div class="note">
+        <strong>Privacy.</strong> Your name and email will not be published unless you say so in your message. Please do not send phone numbers or addresses of other people without their permission.
+      </div>
+
+      <h2>Recent community notices</h2>
+      <p>
+        Once the editors approve a submission, it can be added below as a public notice.
+      </p>
+
+      <!-- EDIT: when you approve a submission, copy this <li> block and fill it in -->
+      <ul class="entry-list">
+        <li>
+          <div class="entry-meta">Sample · 2026</div>
+          <div class="entry-body">
+            <h3>Sample notice title</h3>
+            <p>A short description of the notice or request. Replace this with a real approved submission.</p>
+          </div>
+        </li>
+      </ul>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      © <span id="year"></span> Our locality. Edited by Victor Roy with contributions from village residents.
+      <a href="about.html">About</a> · <a href="mailto:YOUR_EMAIL_HERE@gmail.com">Contact</a>
+    </p>
+    <p class="bangla">আমাদের গ্রাম, আমাদের ইতিহাস।</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>

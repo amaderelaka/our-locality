@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gallery — Our locality</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=Noto+Serif+Bengali:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* Gallery-specific layout */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 4rem;
+  }
+  .gallery-item {
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+  }
+  .gallery-item .placeholder {
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-muted);
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 0.9rem;
+    background: var(--paper-warm);
+  }
+  .gallery-item img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+  }
+  .gallery-item figcaption {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1 class="site-title">
+      <a href="index.html">Our locality <span class="bangla">আমাদের এলাকা</span></a>
+    </h1>
+    <nav class="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="writings.html">Writings</a></li>
+        <li><a href="geography.html">Geography</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="voter.html">Voter info</a></li>
+        <li><a href="facts.html">Facts</a></li>
+        <li><a href="interviews.html">Interviews</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <header class="page-head">
+    <div class="wrap">
+      <p class="page-eyebrow">ছবি ও ভিডিও</p>
+      <h2 class="page-title">Gallery</h2>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <article class="prose" style="max-width: none;">
+
+      <p>
+        Photographs and short videos from village life, festivals, school events, and community gatherings. To add a real photo, save it into the <code>images/</code> folder and replace one of the placeholder blocks below.
+      </p>
+
+      <div class="gallery-grid">
+
+        <!-- EDIT: replace placeholders with <img src="images/your-photo.jpg" alt="..."> -->
+        <figure class="gallery-item">
+          <div class="placeholder">photo placeholder</div>
+          <figcaption>Caption — what the photograph shows, year, photographer credit.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="placeholder">photo placeholder</div>
+          <figcaption>Caption — what the photograph shows, year, photographer credit.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="placeholder">photo placeholder</div>
+          <figcaption>Caption — what the photograph shows, year, photographer credit.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="placeholder">video placeholder</div>
+          <figcaption>For video, paste a YouTube embed in place of the placeholder div.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="placeholder">photo placeholder</div>
+          <figcaption>Caption — what the photograph shows, year, photographer credit.</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <div class="placeholder">photo placeholder</div>
+          <figcaption>Caption — what the photograph shows, year, photographer credit.</figcaption>
+        </figure>
+
+      </div>
+
+      <div class="aside-box">
+        <span class="bangla">নোট</span>
+        <strong>Photographs of people.</strong> Get permission before publishing photographs that show identifiable individuals, especially children. For school or panchayat events, the consent of the organisers is usually enough.
+      </div>
+
+    </article>
+  </div>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>
+      © <span id="year"></span> Our locality. Edited by Victor Roy with contributions from village residents.
+      <a href="about.html">About</a> · <a href="mailto:YOUR_EMAIL_HERE@gmail.com">Contact</a>
+    </p>
+    <p class="bangla">আমাদের গ্রাম, আমাদের ইতিহাস।</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
