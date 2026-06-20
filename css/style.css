@@ -335,6 +335,9 @@ a:hover { border-bottom-color: var(--alta); }
 
 p[lang="bn"] {
   font-family: var(--bangla);
+  font-size: 1.12em;
+  line-height: 1.85;
+}
 }
 
 /* ============================================================
