@@ -333,7 +333,7 @@ a:hover { border-bottom-color: var(--alta); }
   white-space: normal;
 }
 
-p[lang="bn"] {
+p[lang = "bn"] {
   font-family: var(--bangla);
   font-size: 1.12em;
   line-height: 1.85;
