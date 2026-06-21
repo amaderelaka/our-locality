@@ -109,6 +109,35 @@ a:hover { border-bottom-color: var(--alta); }
 /* ============================================================
    Hero (homepage)
    ============================================================ */
+/* Hero banner map */
+.hero-map {
+  margin: 0;
+  padding: 1.5rem 0 0;
+  background: var(--paper);
+}
+.hero-map-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.hero-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+.hero-map figcaption {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-muted);
+  text-align: center;
+  margin-top: 0.75rem;
+}
+@media (max-width: 600px) {
+  .hero-map { padding-top: 1rem; }
+  .hero-map figcaption { font-size: 0.85rem; }
+}
 .hero {
   padding: 4rem 0 3rem;
   border-bottom: 1px solid var(--rule);
