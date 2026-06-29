@@ -532,3 +532,32 @@ p[lang = "bn"] {
   *, *::before, *::after { transition: none !important; }
   .section-card:hover { transform: none; }
 }
+
+/* New addition for bengali english toggle */
+.lang-toggle {
+  display: inline-flex;
+  gap: 0.5rem;
+  margin: 1.5rem 0 2rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.25rem;
+}
+.lang-toggle button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: none;
+  background: none;
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+}
+.lang-toggle button[aria-pressed="true"] {
+  background: var(--alta-red, #9b2226);
+  color: #fff;
+  opacity: 1;
+}
+.lang-block[hidden] {
+  display: none;
+}
